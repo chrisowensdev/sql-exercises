@@ -7,7 +7,7 @@ INSERT INTO restaurants (name, distance, stars, category, favorite_dish, takeout
 
 INSERT INTO reviewer (name, email, karma)
     VALUES 
-        ('Chris', 'chris@chris.com', 7),
+        ('Chris', 'chris@chris.com', 2),
         ('Justin', 'justin@justin.com', 7),
         ('Tait', 'tait@tait.com', 7),
         ('Annemarie', 'annemarie@annemarie.com', 7);
@@ -15,4 +15,6 @@ INSERT INTO reviewer (name, email, karma)
 
 INSERT INTO review (title, review, stars, reviewer_id, restaurants_id)
     VALUES
-        ('Great Chicken', 'The chicken is fantastic', 5, 1, 1);
+        ('Great Chicken', 'The chicken is fantastic', 5, 1, 1),
+        ('Pizza', 'Pizza is great', 4, 2, 3),
+        ('Bad service', 'Horrible', 1, 3, 2);
