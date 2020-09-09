@@ -1,0 +1,44 @@
+1.
+SELECT * FROM review WHERE restaurants_id = 1; 
+
+2.
+SELECT * FROM review, restaurants WHERE restaurants.name = 'Longhorn' AND restaurants_id = restaurants.id;
+
+3.
+SELECT * FROM review, reviewer WHERE reviewer.name = 'Chris' AND reviewer_id = reviewer.id; 
+
+4.
+SELECT name, review FROM restaurants INNER JOIN review ON restaurants.id = restaurants_id;
+
+5.
+SELECT 
+    name, AVG(stars) FROM restaurants;
+
+6.
+SELECT
+    name,
+    count(review.review)
+FROM
+    restaurants,
+    review
+WHERE
+    review.restaurants_id = restaurants.id
+GROUP BY
+    restaurants.name;
+
+
+7.
+SELECT
+    restaurants.name,
+    review.review,
+    reviewer.name
+FROM
+    review,
+    restaurants,
+    reviewer
+WHERE
+    reviewer_id = reviewer.id AND restaurants_id = restaurants.id;
+
+
+8.
+
